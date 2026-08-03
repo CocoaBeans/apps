@@ -1,0 +1,180 @@
+/* Sesh Time — site styles
+   Calm, minimalist, theme-aware. No external assets. */
+
+:root {
+  --bg: #f6f4ef;
+  --surface: #ffffff;
+  --text: #2b2b2e;
+  --muted: #6d6d73;
+  --hairline: #e6e2da;
+  --accent: #3f7d74;      /* sage teal — echoes the app's calm palette */
+  --accent-soft: #e7f0ee;
+  --ring-track: #e6e2da;
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
+  --radius: 16px;
+  --maxw: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16181a;
+    --surface: #1e2124;
+    --text: #e9e7e2;
+    --muted: #9a9894;
+    --hairline: #2c2f33;
+    --accent: #74b6ab;
+    --accent-soft: #1d2a28;
+    --ring-track: #2c2f33;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- Hero ---- */
+.hero {
+  text-align: center;
+  padding: 88px 24px 40px;
+}
+
+.ring {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 28px;
+  display: block;
+}
+.ring circle { fill: none; stroke-width: 6; stroke-linecap: round; }
+.ring .track { stroke: var(--ring-track); }
+.ring .prog {
+  stroke: var(--accent);
+  stroke-dasharray: 220;
+  stroke-dashoffset: 66;               /* ~70% complete */
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin: 0 auto;
+  max-width: 30ch;
+}
+
+.lede {
+  margin: 22px auto 0;
+  max-width: 46ch;
+  color: var(--text);
+}
+
+/* ---- Sections ---- */
+main { padding-bottom: 72px; }
+
+section { margin-top: 56px; }
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+}
+
+h3 {
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+p { margin: 0 0 16px; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  box-shadow: var(--shadow);
+}
+
+.contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+.small { color: var(--muted); font-size: 0.95rem; }
+
+/* FAQ */
+.faq-item { padding: 18px 0; border-bottom: 1px solid var(--hairline); }
+.faq-item:last-child { border-bottom: 0; padding-bottom: 0; }
+.faq-item p { margin: 0; color: var(--muted); }
+
+/* Privacy list */
+.pledge { list-style: none; padding: 0; margin: 0; }
+.pledge li {
+  position: relative;
+  padding: 10px 0 10px 30px;
+  border-bottom: 1px solid var(--hairline);
+}
+.pledge li:last-child { border-bottom: 0; }
+.pledge li::before {
+  content: "";
+  position: absolute;
+  left: 2px; top: 18px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: -6px;
+}
+
+/* ---- Footer ---- */
+footer {
+  border-top: 1px solid var(--hairline);
+  padding: 32px 0 56px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-align: center;
+}
+footer a { color: var(--muted); }
+footer .dot { margin: 0 8px; opacity: .5; }
+
+@media (max-width: 480px) {
+  .hero { padding-top: 64px; }
+  h1 { font-size: 2.1rem; }
+  .tagline { font-size: 1.08rem; }
+}
