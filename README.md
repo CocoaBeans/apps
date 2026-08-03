@@ -9,6 +9,7 @@ Published at **https://cocoabeans.github.io/apps/**
 | App | Support | Privacy |
 |-----|---------|---------|
 | Sesh Time | [/seshtime/](https://cocoabeans.github.io/apps/seshtime/) | [/seshtime/privacy.html](https://cocoabeans.github.io/apps/seshtime/privacy.html) |
+| MetaSort | [/metasort/](https://cocoabeans.github.io/apps/metasort/) | [/metasort/privacy.html](https://cocoabeans.github.io/apps/metasort/privacy.html) |
 
 ## Structure
 
@@ -16,7 +17,11 @@ Published at **https://cocoabeans.github.io/apps/**
 seshtime/
   index.html     support / landing page
   privacy.html   privacy policy
-  style.css      shared stylesheet (theme-aware, self-contained)
+  style.css      per-app stylesheet (theme-aware, self-contained)
+metasort/
+  index.html     support / landing page
+  privacy.html   privacy policy
+  style.css      per-app stylesheet (theme-aware, self-contained)
 404.html         fallback page
 ```
 

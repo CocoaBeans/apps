@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MetaSort — Support</title>
+  <meta name="description" content="Support and help for MetaSort, a native macOS app that organizes photos, videos, and audio into date-based folders using their capture date.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <svg class="stack" viewBox="0 0 80 80" aria-hidden="true">
+      <rect class="back"  x="8"  y="6"  width="44" height="44" rx="10"></rect>
+      <rect class="mid"   x="16" y="15" width="44" height="44" rx="10"></rect>
+      <rect class="front" x="24" y="24" width="44" height="44" rx="10"></rect>
+    </svg>
+    <h1>MetaSort</h1>
+    <p class="tagline">Organize your library by date.</p>
+    <p class="lede">A native Mac app that sorts your photos, videos, and audio into clean,
+      date-based folders &mdash; using the real capture date embedded in each file, not the
+      filesystem date. Everything happens on your Mac. No cloud, no accounts, no tracking.</p>
+  </header>
+
+  <main class="wrap">
+
+    <section id="support">
+      <h2>Need a hand?</h2>
+      <div class="card">
+        <p>Questions, bugs, or a feature you&rsquo;d love to see? I read every message
+          and try to reply within a couple of days.</p>
+        <p class="contact">
+          <span aria-hidden="true">&#9993;</span>
+          <a href="mailto:kevin@twentyfourmountains.com?subject=MetaSort%20support">kevin@twentyfourmountains.com</a>
+        </p>
+        <p class="small">When reporting a bug, it helps to include your macOS version and,
+          if it&rsquo;s about a specific file, the file type &mdash; but don&rsquo;t worry if
+          you&rsquo;re not sure.</p>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Common questions</h2>
+
+      <div class="faq-item">
+        <h3>Will MetaSort move or delete my originals?</h3>
+        <p>Only if you ask it to. Every run starts with a dry-run <strong>Preview</strong> that
+          shows exactly where each file will land before anything is touched. You choose
+          <strong>Copy</strong>, <strong>Move</strong>, or <strong>In-place</strong>, and if you
+          change your mind, <strong>Undo Last Run</strong> reverses the whole operation.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Which file formats does it support?</h3>
+        <p>30+ image formats &mdash; JPEG, PNG, HEIC, WebP, and 25+ professional RAW types like
+          Canon CR2/CR3, Nikon NEF, Sony ARW, and Adobe DNG &mdash; plus common video and audio
+          files. Files without a readable capture date fall back to their modification time.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Does it touch my Photos library?</h3>
+        <p>No. MetaSort never reads or modifies your macOS or iOS Photos library. It works only
+          with the folders you pick and the cameras or memory cards you connect over USB &mdash;
+          and it imports only the files you choose.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How are folders named?</h3>
+        <p>By default, files land in a <code>YYYY/MM/DD/</code> hierarchy with a timestamp
+          filename. You can also pick a built-in style or design your own folder template with
+          tokens like <code>{YYYY}</code>, <code>{MM}</code>, and <code>{DD}</code>.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What data do you collect?</h3>
+        <p>None. MetaSort makes no network connections and works entirely offline &mdash; there&rsquo;s
+          no account, no analytics, and no tracking. See the <a href="privacy.html">Privacy Policy</a>
+          for the full picture.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What do I need to run it?</h3>
+        <p>macOS 14 (Sonoma) or later. MetaSort is pure native Swift &mdash; no bundled runtimes,
+          no background services, nothing to install alongside it.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      &copy; 2026 Kevin Ross
+      <span class="dot">&middot;</span>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </footer>
+</body>
+</html>
