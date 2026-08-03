@@ -4,6 +4,10 @@ Static support and privacy pages for Kevin Ross's apps, served via GitHub Pages.
 
 Published at **https://cocoabeans.github.io/apps/**
 
+The root [/](https://cocoabeans.github.io/apps/) is a small portfolio hub linking
+to each app page plus the external product sites
+([PingPoint](https://pingpoint.io), [Twenty-Four Mountains](https://24mountains.com)).
+
 ## Sites
 
 | App | Support | Privacy |
@@ -14,6 +18,7 @@ Published at **https://cocoabeans.github.io/apps/**
 ## Structure
 
 ```
+index.html       portfolio hub (links to each app + external product sites)
 seshtime/
   index.html     support / landing page
   privacy.html   privacy policy
