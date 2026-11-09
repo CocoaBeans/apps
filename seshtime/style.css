@@ -1,7 +1,6 @@
 /* Sesh Time site styles.
    The palette and the hero art come from the App Store headers: a near-black night, the
-   app's magenta session ring and cyan phase ring on graphite tracks, a soft glow, and faint
-   ripples spreading outward. Self-contained: no external fonts, scripts or CDNs. */
+   app's magenta session ring and cyan phase ring on graphite tracks, in a soft glow. Self-contained: no external fonts, scripts or CDNs. */
 
 :root {
   --bg-top: #1a0c1f;
@@ -21,7 +20,6 @@
   --accent-text: #1a001a;
   --link: #ff7aff;
   --glow-strength: 1;
-  --ripple-opacity: 1;
   --shadow: 0 30px 70px -25px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.06);
   --body-bg: linear-gradient(180deg, var(--bg-top) 0%, var(--bg) 34rem, var(--bg-deep) 100%);
 }
@@ -46,7 +44,6 @@
     --accent-text: #fff5ff;
     --link: #a3009f;
     --glow-strength: 0.7;
-    --ripple-opacity: 0.9;
     --shadow: 0 30px 60px -28px rgba(50, 20, 60, 0.45), 0 0 0 1px rgba(40, 20, 50, 0.08);
   }
 }
@@ -138,19 +135,16 @@ h1 { font-size: clamp(44px, 8vw, 72px); line-height: 1.05; margin: 0; letter-spa
 .fine { margin: 18px 0 0; color: var(--faint); font-size: 14px; }
 
 /* The key art. `.art` is the size of the rings; the SVG behind it is 5.6× wider so the
-   glow and ripples can spread across the hero (clipped at its edges). */
+   glow can spread across the hero (clipped at its sides). */
 .art { position: relative; width: clamp(240px, 30vw, 340px); aspect-ratio: 1; }
 .art svg {
   position: absolute; left: 50%; top: 50%; width: 560%; height: 560%;
   transform: translate(-50%, -50%); z-index: -1; overflow: visible; pointer-events: none;
-  /* Dissolve the outer ripples so the art never shows an edge. */
+  /* Fade the glow out so the art never shows an edge. */
   -webkit-mask-image: radial-gradient(closest-side, #000 55%, transparent 100%);
           mask-image: radial-gradient(closest-side, #000 55%, transparent 100%);
 }
 .art .glow { opacity: var(--glow-strength); }
-.art .ripples { opacity: var(--ripple-opacity); transform-box: fill-box; transform-origin: center;
-                animation: breathe 9s ease-in-out infinite; }
-.art .ripples circle { fill: none; stroke: var(--track); stroke-width: 1.5; }
 .art .track { fill: none; stroke: var(--track); }
 .art .arc { fill: none; stroke-linecap: round; }
 .art .session { stroke: var(--magenta); stroke-dasharray: 86 14; stroke-dashoffset: -14;
@@ -161,11 +155,6 @@ h1 { font-size: clamp(44px, 8vw, 72px); line-height: 1.05; margin: 0; letter-spa
 /* Like the app's rings, the colored arc is the time remaining: it runs back from 12 o'clock. */
 @keyframes fill-session { from { stroke-dasharray: 0 100; stroke-dashoffset: -100; } }
 @keyframes fill-phase   { from { stroke-dasharray: 0 100; stroke-dashoffset: -100; } }
-/* A slow inhale and exhale through the ripples. */
-@keyframes breathe {
-  0%, 100% { transform: scale(1);    opacity: calc(var(--ripple-opacity) * 0.8); }
-  50%      { transform: scale(1.05); opacity: var(--ripple-opacity); }
-}
 
 /* ── Screenshot gallery ─────────────────────────────────────────── */
 
@@ -327,7 +316,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 20px; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .art .ripples, .art .session, .art .phase { animation: none; }
+  .art .session, .art .phase { animation: none; }
 }
 
 /* ── Before launch ──────────────────────────────────────────────────
