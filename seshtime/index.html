@@ -3,77 +3,241 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sesh Time — Support</title>
-  <meta name="description" content="Support and help for Sesh Time, a calm, minimalist interval timer for meditation and any practice you keep.">
+  <title>Sesh Time · A calm timer for any practice</title>
+  <meta name="description" content="A calm interval timer for meditation, qigong, breathwork and any practice you keep. Sets, warmup, breaks and cooldown, singing-bowl cues, and true time when your phone is locked. No account, no ads, no tracking.">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f8f6fa" media="(prefers-color-scheme: light)">
+  <meta name="apple-itunes-app" content="app-id=6756520048">
+  <link rel="icon" type="image/png" href="media/favicon-64.png">
+  <link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sesh Time">
+  <meta property="og:title" content="Sesh Time · A calm timer for any practice">
+  <meta property="og:description" content="A calm interval timer for meditation, qigong, breathwork and any practice you keep.">
+  <meta property="og:url" content="https://cocoabeans.github.io/apps/seshtime/">
+  <meta property="og:image" content="https://cocoabeans.github.io/apps/seshtime/media/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <svg class="ring" viewBox="0 0 80 80" aria-hidden="true">
-      <circle class="track" cx="40" cy="40" r="35"></circle>
-      <circle class="prog"  cx="40" cy="40" r="35"></circle>
-    </svg>
-    <h1>Sesh Time</h1>
-    <p class="tagline">A calm timer for any practice.</p>
-    <p class="lede">A quiet, beautiful interval timer for meditation, stretching, qigong,
-      tai chi, breathwork &mdash; any practice you keep. No account, no ads, just you and the session.</p>
-  </header>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><img src="media/icon-256.png" alt="" width="30" height="30">Sesh Time</a>
+    <nav class="links" aria-label="Site">
+      <a class="wide" href="#features">Features</a>
+      <a class="wide" href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+      <a class="pill" href="https://apps.apple.com/app/id6756520048">App Store</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="wrap">
-
-    <section id="support">
-      <h2>Need a hand?</h2>
-      <div class="card">
-        <p>Questions, bugs, or a feature you&rsquo;d love to see? I read every message
-          and try to reply within a couple of days.</p>
-        <p class="contact">
-          <span aria-hidden="true">&#9993;</span>
-          <a href="mailto:support@seshtime.app?subject=Sesh%20Time%20support">support@seshtime.app</a>
-        </p>
-        <p class="small">When reporting a bug, it helps to include your device model and iOS
-          version &mdash; but don&rsquo;t worry if you&rsquo;re not sure.</p>
-      </div>
-    </section>
-
-    <section id="faq">
-      <h2>Common questions</h2>
-
-      <div class="faq-item">
-        <h3>Does the timer stay accurate if I lock my screen?</h3>
-        <p>Yes. Sesh Time tracks real elapsed time, so you can lock your phone or switch
-          apps mid-session and the countdown stays true when you come back.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>How do I create or edit a preset?</h3>
-        <p>Open the Presets screen from the menu. Tap a preset to rename it, adjust its
-          intervals and phases, and set per-phase sounds. Session length can also be
-          adjusted right on the timer screen.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Does Sesh Time work with Apple Health?</h3>
-        <p>Optionally, yes. If you grant permission, finished sessions can be saved to
-          Apple Health as mindful minutes. It&rsquo;s entirely opt-in, and Sesh Time never
-          reads anything back from Health.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>What data do you collect?</h3>
-        <p>None. There&rsquo;s no account, no analytics, and no tracking &mdash; your session
-          history stays on your device. See the <a href="privacy.html">Privacy Policy</a>
-          for the full picture.</p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
+<main>
+  <div class="hero">
     <div class="wrap">
-      &copy; 2026 Kevin Ross
-      <span class="dot">&middot;</span>
-      <a href="privacy.html">Privacy Policy</a>
+      <div>
+        <h1>Sesh Time</h1>
+        <p class="tagline">A calm timer for any practice.</p>
+        <p class="practices">Meditation<span aria-hidden="true">·</span>qigong<span aria-hidden="true">·</span>tai&nbsp;chi<span aria-hidden="true">·</span>breathwork<span aria-hidden="true">·</span>stretching</p>
+        <p class="intro">Set how many rounds, how long each one lasts, and whether to ease in or wind down. Then press Start and let a bowl tell you when each round ends. <strong>No account, no ads, just you and the session.</strong></p>
+        <div class="cta">
+          <a class="button" href="https://apps.apple.com/app/id6756520048">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12"/></svg>
+            Download on the App Store
+          </a>
+          <a class="ghost" href="#features">See what it does</a>
+        </div>
+        <p class="fine">iPhone and iPad · iOS 17 or later · No tracking of any kind</p>
+      </div>
+
+      <!-- The store header's key art: the session ring (magenta) and phase ring (cyan), each
+           showing the time remaining, in a glow with ripples spreading outward. -->
+      <div class="art" aria-hidden="true">
+        <svg viewBox="-600 -600 1200 1200" focusable="false">
+          <defs>
+            <radialGradient id="glow-wide"><stop offset="0" stop-color="#ff00ff" stop-opacity="0.16"/><stop offset="1" stop-color="#ff00ff" stop-opacity="0"/></radialGradient>
+            <radialGradient id="glow-near"><stop offset="0" stop-color="#ff00ff" stop-opacity="0.14"/><stop offset="1" stop-color="#ff00ff" stop-opacity="0"/></radialGradient>
+            <radialGradient id="glow-core"><stop offset="0" stop-color="#64d2ff" stop-opacity="0.10"/><stop offset="1" stop-color="#64d2ff" stop-opacity="0"/></radialGradient>
+          </defs>
+          <g class="glow">
+            <circle r="420" fill="url(#glow-wide)"/>
+            <circle r="200" fill="url(#glow-near)"/>
+            <circle r="120" fill="url(#glow-core)"/>
+          </g>
+          <g class="ripples">
+            <circle r="155" stroke-opacity="0.55"/>
+            <circle r="220" stroke-opacity="0.46"/>
+            <circle r="300" stroke-opacity="0.37"/>
+            <circle r="400" stroke-opacity="0.28"/>
+            <circle r="520" stroke-opacity="0.19"/>
+          </g>
+          <circle class="track" r="100" stroke-width="7.5"/>
+          <circle class="track" r="86" stroke-width="6"/>
+          <circle class="arc session" r="100" stroke-width="7.5" pathLength="100" transform="rotate(-90)"/>
+          <circle class="arc phase" r="86" stroke-width="6" pathLength="100" transform="rotate(-90)"/>
+        </svg>
+      </div>
     </div>
-  </footer>
+  </div>
+
+  <div class="wrap gallery">
+    <div class="gallery-track" tabindex="0" aria-label="Sesh Time screenshots">
+      <figure>
+        <img src="media/1-running.jpg" alt="A session in progress: the outer ring shows 2 minutes 6 seconds left in the session, the inner ring 6 seconds left in set 1 of 5" width="552" height="1200">
+        <figcaption>A session in progress</figcaption>
+      </figure>
+      <figure>
+        <img src="media/2-setup.jpg" alt="Setting up a session: 5 sets of 3 minutes, with fine steppers, quick-set durations and an Add phases row" width="552" height="1200">
+        <figcaption>Set it up in seconds</figcaption>
+      </figure>
+      <figure>
+        <img src="media/3-presets.jpg" alt="The Presets screen listing saved sessions such as 5 × 3 min and 8 × 3 min, with their total lengths" width="552" height="1200">
+        <figcaption>Save your sessions</figcaption>
+      </figure>
+      <figure>
+        <img src="media/4-history.jpg" alt="The History screen: total time, number of seshes and a day streak above a 30-day bar chart and a list of recent seshes" width="552" height="1200" loading="lazy">
+        <figcaption>See your practice add up</figcaption>
+      </figure>
+    </div>
+    <div class="gallery-nav">
+      <button class="gallery-btn" type="button" data-dir="-1" aria-label="Previous screenshots"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 6 10l6 6"/></svg></button>
+      <button class="gallery-btn" type="button" data-dir="1" aria-label="Next screenshots"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 4 6 6-6 6"/></svg></button>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="glance">
+        <div>
+          <h2>Two rings, one glance</h2>
+          <p>The outer ring is the whole session. The inner ring is the set, break or phase you're in right now. Each one empties as its time runs down, so you can tell how far along you are with half-open eyes, without reading a number.</p>
+          <p>When a round ends, the inner ring fills again and a bowl rings. With a single round and no phases, there's just the one ring.</p>
+        </div>
+        <div class="key">
+          <svg viewBox="-60 -60 120 120" aria-hidden="true" focusable="false">
+            <circle class="track" r="50" stroke-width="7"/>
+            <circle class="track" r="37" stroke-width="6"/>
+            <circle class="arc session" r="50" stroke-width="7" pathLength="100" transform="rotate(-90)"/>
+            <circle class="arc phase" r="37" stroke-width="6" pathLength="100" transform="rotate(-90)"/>
+          </svg>
+          <ul class="legend" aria-label="What the rings show">
+            <li><span class="swatch c-session"></span><span><strong>Session</strong> left</span></li>
+            <li><span class="swatch c-phase"></span><span><strong>This round</strong> left</span></li>
+            <li><span class="swatch c-track"></span><span>Time already sat</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>What it does</h2>
+      <p class="lede">Sesh Time keeps the structure of a session so you don't have to. Shape it once, and every time after it's one tap.</p>
+      <div class="grid">
+        <div class="card">
+          <h3><span class="dot c-session"></span>Shape any session</h3>
+          <p>Choose how many sets and how long each lasts. Nudge by a minute or a second, or tap a quick-set duration you've chosen.</p>
+        </div>
+        <div class="card">
+          <h3><span class="dot c-phase"></span>Warmup, breaks and cooldown</h3>
+          <p>Add a warmup to settle in, a rest between sets, and a cooldown or dedication at the end. Each one is optional and timed on its own.</p>
+        </div>
+        <div class="card">
+          <h3><span class="dot c-session"></span>Bowls and bells</h3>
+          <p>Eleven singing bowls, bells and tingsha, all made in-house. Pick one for the start, one for each new round and one for the end, and set how loud they ring.</p>
+        </div>
+        <div class="card">
+          <h3><span class="dot c-phase"></span>Keeps true time</h3>
+          <p>Lock your phone or switch apps and the session keeps counting by the clock. If it ends while you're away, the closing bell still rings, as long as notifications are allowed. It can also keep the screen from dimming.</p>
+        </div>
+        <div class="card">
+          <h3><span class="dot c-session"></span>Presets for every practice</h3>
+          <p>Save a session as a preset and load it from the timer in one tap. Rename or duplicate them, and give each preset its own sounds.</p>
+        </div>
+        <div class="card">
+          <h3><span class="dot c-phase"></span>Your colors</h3>
+          <p>Choose a palette such as Sunset, Forest or Ocean, or pick your own two colors. Light, dark or automatic, on iPhone and iPad, upright or sideways.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div>
+        <h2>Watch your practice add up</h2>
+        <p class="lede">Every session you sit goes into History: your total time, how many seshes, and a chart of the last 30 days. Short sits count too.</p>
+        <ul class="chips" aria-label="What History shows">
+          <li>Total time</li><li>Seshes</li><li>30-day chart</li><li>Day streak</li><li>Apple Health</li>
+        </ul>
+        <p class="tip"><strong>A streak if you want one.</strong> Some people like the nudge, and others find it adds pressure a practice doesn't need, so the streak turns off with one tap. Completed sessions can also be saved to Apple Health as mindful minutes, if you choose.</p>
+      </div>
+      <img src="media/4-history.jpg" alt="" width="552" height="1200" loading="lazy">
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <h2>Private by design</h2>
+      <p class="lede">A timer has no business knowing who you are. Sesh Time doesn't ask.</p>
+      <ul class="checks">
+        <li><strong>No account.</strong> There's nothing to sign up for and nothing to sign in to.</li>
+        <li><strong>No trackers.</strong> No analytics, no advertising and no third-party frameworks of any kind.</li>
+        <li><strong>Stays on your device.</strong> Your presets, settings and history never leave it.</li>
+        <li><strong>Apple Health only if you ask.</strong> Sesh Time writes mindful minutes for sessions you finish, and never reads anything back.</li>
+      </ul>
+      <p class="more"><a href="privacy.html">Read the privacy policy</a></p>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap">
+      <h2>Your practice, your timing.</h2>
+      <p class="lede">Questions or ideas? <a href="support.html">Get help or send feedback</a>.</p>
+      <div class="cta">
+        <a class="button" href="https://apps.apple.com/app/id6756520048">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12"/></svg>
+          Download on the App Store
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 <a href="../">Kevin Ross</a></span>
+    <nav aria-label="Footer">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://apps.apple.com/app/id6756520048">App Store</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Gallery arrows: scroll the strip by most of its visible width, and only show them
+  // when the strip overflows.
+  document.querySelectorAll(".gallery").forEach(function (gallery) {
+    var track = gallery.querySelector(".gallery-track");
+    var buttons = gallery.querySelectorAll(".gallery-btn");
+    function update() {
+      var max = track.scrollWidth - track.clientWidth - 2;
+      buttons[0].disabled = track.scrollLeft <= 2;
+      buttons[1].disabled = track.scrollLeft >= max;
+      gallery.classList.toggle("scrollable", max > 0);
+    }
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        track.scrollBy({ left: Number(button.dataset.dir) * track.clientWidth * 0.8, behavior: "smooth" });
+      });
+    });
+    track.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  });
+</script>
 </body>
 </html>
