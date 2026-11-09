@@ -13,7 +13,7 @@ keep their URLs, since app listings and other links point to them.
 
 | App | Support | Privacy |
 |-----|---------|---------|
-| Sesh Time | [/seshtime/](https://cocoabeans.github.io/apps/seshtime/) | [/seshtime/privacy.html](https://cocoabeans.github.io/apps/seshtime/privacy.html) |
+| Sesh Time | [/seshtime/support.html](https://cocoabeans.github.io/apps/seshtime/support.html) (home: [/seshtime/](https://cocoabeans.github.io/apps/seshtime/)) | [/seshtime/privacy.html](https://cocoabeans.github.io/apps/seshtime/privacy.html) |
 | MetaSort | [/metasort/](https://cocoabeans.github.io/apps/metasort/) | [/metasort/privacy.html](https://cocoabeans.github.io/apps/metasort/privacy.html) |
 
 ## Structure
@@ -21,9 +21,12 @@ keep their URLs, since app listings and other links point to them.
 ```
 index.html       redirect to the portfolio at https://cocoabeans.github.io/
 seshtime/
-  index.html     support / landing page
+  index.html     product landing page (hero, screenshots, features, privacy)
+  support.html   contact + FAQ
   privacy.html   privacy policy
-  style.css      per-app stylesheet (theme-aware, self-contained)
+  style.css      per-app stylesheet (theme-aware, self-contained; palette and
+                 hero art match the App Store headers)
+  media/         icon, favicons, share image and web-sized screenshots
 metasort/
   index.html     support / landing page
   privacy.html   privacy policy
